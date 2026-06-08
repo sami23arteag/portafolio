@@ -1,0 +1,406 @@
+/* =========================
+   PORTAFOLIO 
+========================= */
+
+:root{
+    --negro:#111111;
+    --gris-oscuro:#444444;
+    --gris:#777777;
+    --gris-claro:#f5f5f5;
+    --blanco:#ffffff;
+    --acento:#0A84FF;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--blanco);
+    color:var(--negro);
+    line-height:1.7;
+}
+
+.contenedor{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 24px;
+}
+
+section{
+    padding:100px 0;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.sitio-header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #e9e9e9;
+}
+
+.header-bloque{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:80px;
+}
+
+.logotipo{
+    font-size:1.2rem;
+    font-weight:700;
+    letter-spacing:4px;
+    color:var(--negro);
+}
+
+.navegacion-principal{
+    display:flex;
+    gap:30px;
+}
+
+.navegacion-principal a{
+    text-decoration:none;
+    color:var(--negro);
+    font-weight:500;
+    transition:.3s;
+}
+
+.navegacion-principal a:hover{
+    color:var(--acento);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.seccion-hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-bloque{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+}
+
+.hero-columna-texto{
+    flex:1;
+}
+
+.hero-columna-texto h1{
+    font-size:4.5rem;
+    font-weight:700;
+    line-height:1;
+    margin-bottom:15px;
+}
+
+.hero-columna-texto h2{
+    font-size:1.2rem;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    color:var(--gris);
+    margin-bottom:30px;
+}
+
+.hero-columna-texto p{
+    color:var(--gris-oscuro);
+    margin-bottom:30px;
+}
+
+.boton-accion{
+    display:inline-block;
+    padding:16px 34px;
+    background:var(--negro);
+    color:var(--blanco);
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.boton-accion:hover{
+    background:var(--acento);
+}
+
+.hero-columna-imagen{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.foto-perfil{
+    width:420px;
+    height:420px;
+    object-fit:cover;
+    border-radius:24px;
+}
+
+/* =========================
+   TITULOS
+========================= */
+
+.titulo-seccion{
+    text-align:center;
+    font-size:2.8rem;
+    font-weight:700;
+    margin-bottom:60px;
+}
+
+.texto-lorem{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    color:var(--gris-oscuro);
+}
+
+/* =========================
+   SOBRE MI
+========================= */
+
+.seccion-sobre-mi{
+    background:var(--gris-claro);
+}
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.seccion-proyectos{
+    background:var(--blanco);
+}
+
+.proyectos-rejilla{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.tarjeta-proyecto{
+    background:var(--blanco);
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid #ececec;
+    transition:.3s;
+}
+
+.tarjeta-proyecto:hover{
+    transform:translateY(-8px);
+}
+
+.proyecto-imagen{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.proyecto-contenido{
+    padding:25px;
+}
+
+.proyecto-contenido h3{
+    margin-bottom:12px;
+    font-size:1.4rem;
+}
+
+.proyecto-contenido p{
+    color:var(--gris-oscuro);
+}
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.seccion-habilidades{
+    background:var(--gris-claro);
+}
+
+.habilidades-rejilla{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.tarjeta-habilidad{
+    padding:14px 24px;
+    background:var(--blanco);
+    border:1px solid #dddddd;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.tarjeta-habilidad:hover{
+    background:var(--negro);
+    color:var(--blanco);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto-bloque{
+    display:flex;
+    gap:70px;
+    align-items:flex-start;
+}
+
+.contacto-columna-texto{
+    flex:1;
+}
+
+.contacto-columna-formulario{
+    flex:1;
+}
+
+.contacto-columna-texto h3{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.contacto-columna-texto p{
+    color:var(--gris-oscuro);
+}
+
+.formulario-contacto{
+    background:var(--gris-claro);
+    padding:40px;
+    border-radius:20px;
+}
+
+.grupo-formulario{
+    margin-bottom:20px;
+}
+
+.grupo-formulario label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #d9d9d9;
+    border-radius:12px;
+    font-family:'Montserrat',sans-serif;
+    outline:none;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus{
+    border-color:var(--acento);
+}
+
+.grupo-formulario textarea{
+    resize:vertical;
+}
+
+.boton-formulario{
+    width:100%;
+    padding:16px;
+    background:var(--negro);
+    color:var(--blanco);
+    border:none;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.boton-formulario:hover{
+    background:var(--acento);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.sitio-footer{
+    background:var(--negro);
+    padding:50px 0;
+}
+
+.footer-bloque{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.texto-copyright{
+    color:var(--blanco);
+}
+
+.redes-sociales{
+    display:flex;
+    gap:20px;
+}
+
+.enlace-red{
+    color:var(--blanco);
+    text-decoration:none;
+    transition:.3s;
+}
+
+.enlace-red:hover{
+    color:var(--acento);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .header-bloque{
+        flex-direction:column;
+        gap:20px;
+        padding:20px 0;
+    }
+
+    .navegacion-principal{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-bloque{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-columna-texto h1{
+        font-size:3rem;
+    }
+
+    .foto-perfil{
+        width:280px;
+        height:280px;
+    }
+
+    .contacto-bloque{
+        flex-direction:column;
+    }
+
+    .footer-bloque{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+}
